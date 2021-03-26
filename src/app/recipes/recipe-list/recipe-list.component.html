@@ -3,4 +3,5 @@
   <button class="btn btn-info">Add new recipe</button>
 </div>
 <br>
-<app-recipe-item *ngFor="let recipeItem of recipes" [recipeItem]="recipeItem"></app-recipe-item>
+<app-recipe-item *ngFor="let recipeItem of recipes" [recipeItem]="recipeItem"
+(recipeDetails)="onRecipeSelected(recipeItem)"></app-recipe-item>
