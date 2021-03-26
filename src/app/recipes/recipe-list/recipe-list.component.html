@@ -3,19 +3,4 @@
   <button class="btn btn-info">Add new recipe</button>
 </div>
 <br>
-<div class="row">
-  <div class="col-sm-12" *ngFor="let recipeItem of recipes">
-    <a href="#" class="list-group-item clearfix">
-      <div class="float-left">
-        <h4 class="list-group-item-heading">{{recipeItem.name}}</h4>
-        <p class="list-group-item-text">{{recipeItem.description}}</p>
-      </div>
-      <span class="float-right">
-        <img src="{{recipeItem.imgPath}}" alt="{{recipeItem.name}}" class="img-responsive" style="max-height: 50px;">
-      </span>
-    </a>
-    <br>
-  </div>
-
-</div>
-<app-recipe-item></app-recipe-item>
+<app-recipe-item *ngFor="let recipeItem of recipes" [recipeItem]="recipeItem"></app-recipe-item>
